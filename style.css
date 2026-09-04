@@ -85,6 +85,12 @@ body {
     background-color: #1e293b;
 }
 
+.contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #1e293b;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
