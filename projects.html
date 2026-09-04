@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Diversity of Our Students</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Header -->
+    <!-- Main Navigation Bar -->
     <header>
         <nav class="navbar">
             <div class="logo">MyBrand</div>
@@ -21,56 +21,54 @@
         </nav>
     </header>
 
-    <!-- Main Projects Section -->
-    <main class="projects-container">
-        <h1>My Projects</h1>
-        <p class="subtitle">Explore creative work across music, drama, art, and experimental ideas.</p>
+    <!-- Main Title with 1-inch top margin gap -->
+    <div class="title-container">
+        <h1 class="page-title">Diversity of Our Students</h1>
+    </div>
 
-        <!-- Category Tags Bar -->
-        <div class="filter-tags">
-            <span class="tag active">All</span>
-            <span class="tag">Music</span>
-            <span class="tag">Drama</span>
-            <span class="tag">Art</span>
-            <span class="tag">Mind Blow</span>
-        </div>
+    <!-- Centered Category Cards Grid -->
+    <main class="grid-container">
 
-        <!-- Projects Grid -->
-        <div class="projects-grid">
-            
-            <!-- Music Project -->
-            <div class="project-card">
-                <span class="category-badge">Music</span>
-                <h3>Orchestral Score Arrangement</h3>
-                <p>A original composition featuring acoustic and synthesized instrumentation.</p>
-                <a href="#" class="btn-secondary">View Project</a>
+        <!-- Music Tile -->
+        <a href="music.html" class="category-card music-theme">
+            <div class="card-content">
+                <h2>Music</h2>
             </div>
-
-            <!-- Drama Project -->
-            <div class="project-card">
-                <span class="category-badge">Drama</span>
-                <h3>Stage Production Script</h3>
-                <p>A original theatrical script exploring modern themes and character dynamics.</p>
-                <a href="#" class="btn-secondary">View Project</a>
+            <div class="summary-tile">
+                <p>Explorations in orchestral scores, acoustic compositions, and instrumental arrangements.</p>
             </div>
+        </a>
 
-            <!-- Art Project -->
-            <div class="project-card">
-                <span class="category-badge">Art</span>
-                <h3>Digital Illustration Series</h3>
-                <p>A collection of high-concept digital artwork and visual manipulation pieces.</p>
-                <a href="#" class="btn-secondary">View Project</a>
+        <!-- Drama Tile -->
+        <a href="drama.html" class="category-card drama-theme">
+            <div class="card-content">
+                <h2>Drama</h2>
             </div>
-
-            <!-- Mind Blow Project -->
-            <div class="project-card">
-                <span class="category-badge">Mind Blow</span>
-                <h3>Interactive Algorithmic Visuals</h3>
-                <p>An experimental interactive concept mixing physics simulations and generative graphics.</p>
-                <a href="#" class="btn-secondary">View Project</a>
+            <div class="summary-tile">
+                <p>Original theatrical scripts, stage productions, and character-driven storytelling.</p>
             </div>
+        </a>
 
-        </div>
+        <!-- Art Tile -->
+        <a href="art.html" class="category-card art-theme">
+            <div class="card-content">
+                <h2>Art</h2>
+            </div>
+            <div class="summary-tile">
+                <p>Digital illustrations, visual design pieces, and photo manipulation projects.</p>
+            </div>
+        </a>
+
+        <!-- Wanna Blow Your Mind? Tile -->
+        <a href="mind-blow.html" class="category-card mind-blow-theme">
+            <div class="card-content">
+                <h2>Wanna Blow Your Mind?</h2>
+            </div>
+            <div class="summary-tile">
+                <p>Experimental algorithms, physics simulations, and high-concept creative ideas.</p>
+            </div>
+        </a>
+
     </main>
 
     <!-- Footer -->
