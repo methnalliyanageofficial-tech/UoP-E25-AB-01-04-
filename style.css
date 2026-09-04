@@ -78,7 +78,7 @@ body {
     background-color: #0369a1;
 }
 
-/* About & Footer */
+/* About , Footer & contact */
 .about {
     padding: 4rem 2rem;
     text-align: center;
@@ -89,6 +89,57 @@ body {
     padding: 4rem 2rem;
     text-align: center;
     background-color: #1e293b;
+}
+
+/*Team Section*/
+
+.team-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #0f172a;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 260px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #38bdf8;
+}
+
+.team-card h3 {
+    color: #f8fafc;
+    margin-bottom: 0.25rem;
+}
+
+.team-card .role {
+    color: #38bdf8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.team-card .bio {
+    color: #94a3b8;
+    font-size: 0.85rem;
 }
 
 footer {
