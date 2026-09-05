@@ -136,6 +136,14 @@ body {
     object-fit: cover;
     margin-bottom: 1rem;
     border: 3px solid #38bdf8;
+
+    /* Smooth zoom transition */
+    transition: transform 0.3s ease;
+}
+
+/* Zoom image slightly when hovering over the card */
+.team-card:hover .team-img {
+    transform: scale(1.15); /* Scales image up by 15% */
 }
 
 .team-card h3 {
