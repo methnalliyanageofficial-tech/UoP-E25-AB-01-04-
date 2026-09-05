@@ -111,9 +111,22 @@ body {
     background-color: #1e293b;
     border-radius: 12px;
     padding: 2rem;
+    width: 100%;             /* Ensures smooth mobile responsiveness */
     max-width: 260px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+}
+
+/* Tile Popup Animation on Hover */
+.team-card {
+    /* Ensure smooth transition for scaling */
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.08) translateY(-10px); /* Pops up and scales larger */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.3); /* Glowing popup shadow */
+    z-index: 10;
 }
 
 .team-img {
