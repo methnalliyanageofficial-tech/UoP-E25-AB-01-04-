@@ -1,6 +1,6 @@
 /* Music Page */
 
-:root {
+/* :root {
   --bg-color: #1A0507;
   --card-bg: #2B080C;
   --accent-maroon: #8B0000;
@@ -53,7 +53,8 @@ header p {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */ 
+/*
   height: 0;
   overflow: hidden;
   border-radius: 8px;
@@ -128,4 +129,146 @@ header p {
   margin: 1rem;
   font-size: 1.05rem;
   color: var(--text-main);
+} */
+:root {
+  --bg-dark-maroon: #210508;
+  --bg-maroon: #3B0A11;
+  --card-maroon: #501018;
+  --accent-maroon: #800020;
+  --highlight-maroon: #A31C30;
+  --text-main: #F2E6E8;
+  --text-muted: #D9AAB0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, var(--bg-maroon) 0%, var(--bg-dark-maroon) 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+/* Player Frame */
+.player-section {
+  background-color: var(--card-maroon);
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid rgba(163, 28, 48, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(128, 0, 32, 0.2);
+  margin-bottom: 2.5rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-title {
+  margin: 1rem 0 0.25rem 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Video Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tile {
+  background-color: var(--card-maroon);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(163, 28, 48, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  border-color: var(--highlight-maroon);
+  box-shadow: 0 10px 25px rgba(163, 28, 48, 0.35);
+}
+
+.thumb-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #000;
+}
+
+.thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 5, 8, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.play-icon {
+  background-color: var(--highlight-maroon);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding-left: 3px;
+}
+
+.tile:hover .play-overlay {
+  opacity: 1;
+}
+
+.tile-info {
+  padding: 1rem;
+}
+
+.tile-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
