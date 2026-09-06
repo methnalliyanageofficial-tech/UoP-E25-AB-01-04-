@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <h1>Specific Video Topic</h1>
     
     <!-- YouTube Embed Code -->
+<!-- 
     <iframe 
         width="560" 
         height="315" 
@@ -17,5 +19,74 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
     </iframe>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>MAROON VIBES</h1>
+    <p>Curated Music & Performances</p>
+  </header>
+
+  <main class="container">
+    <section class="player-section">
+      <div class="video-container">
+        <iframe id="main-player" 
+          src="https://www.youtube.com/embed/ooquLxKCI90?enablejsapi=1" 
+          title="YouTube Video Player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h2 id="current-title">Featured Performance</h2>
+    </section>
+
+    <section class="grid-section">
+      <div class="grid">
+        
+        <article class="tile" onclick="playVideo('ooquLxKCI90', 'Acoustic Guitar Session')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/ooquLxKCI90/hqdefault.jpg" alt="Acoustic Guitar Session">
+            <span class="play-btn">▶</span>
+          </div>
+          <h3>Acoustic Guitar Session</h3>
+        </article>
+
+        <article class="tile" onclick="playVideo('VIDEO_ID_2', 'Late Night Jazz Covers')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="Late Night Jazz Covers">
+            <span class="play-btn">▶</span>
+          </div>
+          <h3>Late Night Jazz Covers</h3>
+        </article>
+
+        <article class="tile" onclick="playVideo('VIDEO_ID_3', 'Live Vocal Performance')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="Live Vocal Performance">
+            <span class="play-btn">▶</span>
+          </div>
+          <h3>Live Vocal Performance</h3>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function playVideo(videoId, title) {
+      document.getElementById('main-player').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      document.getElementById('current-title').textContent = title;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
