@@ -314,6 +314,19 @@ body {
     font-weight: 600;
 }
 
+/* Transparent Background Icon */
+.card-icon {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;            /* Adjust icon size */
+    height: auto;
+    opacity: 0.18;           /* Controls transparency (0.1 to 0.3 works best) */
+    pointer-events: none;    /* Prevents the image from interfering with clicks */
+    z-index: 0;
+}
+
 /* Color Themes Matched to Content */
 .music-theme {
     background: linear-gradient(135deg, #1e1b4b, #4338ca); /* Deep Purple / Indigo */
