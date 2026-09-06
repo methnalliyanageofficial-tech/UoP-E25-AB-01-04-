@@ -22,7 +22,7 @@
 </body>
 </html>
 -->
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -75,6 +75,76 @@
             <span class="play-btn">▶</span>
           </div>
           <h3>Live Vocal Performance</h3>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function playVideo(videoId, title) {
+      document.getElementById('main-player').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      document.getElementById('current-title').textContent = title;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <link rel="stylesheet" href="music.style.css">
+</head>
+<body>
+
+  <main class="container">
+    <section class="player-section">
+      <div class="video-container">
+        <iframe id="main-player" 
+          src="https://www.youtube.com/embed/ooquLxKCI90?enablejsapi=1" 
+          title="YouTube Video Player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h2 id="current-title" class="video-title">Acoustic Session</h2>
+    </section>
+
+    <section class="grid-section">
+      <div class="grid">
+        
+        <article class="tile" onclick="playVideo('ooquLxKCI90', 'Acoustic Session')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/ooquLxKCI90/hqdefault.jpg" alt="Acoustic Session">
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+          </div>
+          <div class="tile-info">
+            <h3>Acoustic Session</h3>
+          </div>
+        </article>
+
+        <article class="tile" onclick="playVideo('VIDEO_ID_2', 'Instrumental Track')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg" alt="Instrumental Track">
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+          </div>
+          <div class="tile-info">
+            <h3>Instrumental Track</h3>
+          </div>
+        </article>
+
+        <article class="tile" onclick="playVideo('VIDEO_ID_3', 'Live Jam')">
+          <div class="thumb-box">
+            <img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg" alt="Live Jam">
+            <div class="play-overlay"><span class="play-icon">▶</span></div>
+          </div>
+          <div class="tile-info">
+            <h3>Live Jam</h3>
+          </div>
         </article>
 
       </div>
