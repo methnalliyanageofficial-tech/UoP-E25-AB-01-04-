@@ -387,3 +387,134 @@ footer {
     color: #64748b;
     background-color: #0f172a;
 }
+
+/* Music Page */
+:root {
+  --bg-color: #1A0507;
+  --card-bg: #2B080C;
+  --accent-maroon: #8B0000;
+  --maroon-light: #C0392B;
+  --text-main: #F4EAEB;
+  --text-muted: #D1A3A8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(180deg, #4A0E17 0%, var(--bg-color) 100%);
+  border-bottom: 1px solid rgba(200, 50, 50, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: #FFD1D6;
+}
+
+header p {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.player-section {
+  margin-bottom: 3rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tile {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(139, 0, 0, 0.4);
+  border-color: var(--accent-maroon);
+}
+
+.thumb-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(139, 0, 0, 0.85);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.tile:hover .play-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.tile h3 {
+  margin: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
