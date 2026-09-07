@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    // Direct link guard: Redirect to home page if not signed in
-    //if (localStorage.getItem('isLoggedIn') !== 'true') {
-     // alert('Access restricted. Please sign in from the Home page.');
-     // window.location.href = '../index.html';
-    //} 
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drama World</title>
+  <title>Drama</title>
   <link rel="stylesheet" href="drama.style.css">
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-brand">E25 Drama</div>
-    <button onclick="logout()" class="logout-btn">Log Out</button>
-  </header>
 
   <main class="container">
     <!-- Main Featured Video Player -->
@@ -32,7 +19,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      <h2 id="current-title" class="video-title">Featured Drama Play</h2>
+      <h2 id="current-title" class="video-title">Stage Play - Act 1</h2>
     </section>
 
     <!-- Video Grid Tiles -->
@@ -81,11 +68,6 @@
       document.getElementById('main-player').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
       document.getElementById('current-title').textContent = title;
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function logout() {
-      localStorage.removeItem('isLoggedIn');
-      window.location.href = '../index.html';
     }
   </script>
 </body>
