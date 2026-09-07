@@ -18,48 +18,13 @@ body {
   min-height: 100vh;
 }
 
-/* Header & Logout Button */
-/*
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(13, 27, 42, 0.8);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(58, 134, 255, 0.15);
-}
-
-.nav-brand {
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: var(--highlight-blue);
-}
-
-.logout-btn {
-  background-color: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--accent-blue);
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.logout-btn:hover {
-  background-color: var(--highlight-blue);
-  color: white;
-  border-color: var(--highlight-blue);
-}
-
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 2.5rem 1rem;
-} */
+}
 
-/* Main Player Frame */
+/* Player Frame */
 .player-section {
   background-color: var(--card-blue);
   padding: 1.25rem;
