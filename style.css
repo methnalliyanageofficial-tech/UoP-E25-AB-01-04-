@@ -15,76 +15,107 @@ body {
     color: #f8fafc;
     line-height: 1.6;
 }
+/* Center alignment for the parent container if needed */
+.hero-content {
+    text-align: center;
+}
 
-/* Container for the hero button and popup */
-
+/* Container for the button and popup - centered relative to hero content */
 .btn-popup-wrapper {
     position: relative;
     display: inline-block;
+    margin: 0 auto;
 }
 
-/* Base state for the hidden pop-up */
-
+/* Base popup state: vertically aligned list positioned on the RIGHT side of the button */
 .btn-popup-wrapper .tiles-popup {
     position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 10px;
-
-    /* Hide popup by default */
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(10px); /* 10px gap to the right */
+    
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 
-    /* Layout grid for 4 tiles */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* Vertical stack alignment */
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    padding: 12px;
-    background: rgba(15, 23, 42, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 14px;
+    
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px); /* Frosted glass aesthetic */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 
-    /* Smooth animation down */
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 100;
 }
 
-/* Hover trigger state */
+/* Invisible hover bridge to prevent the popup from hiding when moving mouse rightward */
+.btn-popup-wrapper .tiles-popup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+}
 
+/* Hover trigger state */
 .btn-popup-wrapper:hover .tiles-popup {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(-50%) translateX(15px);
 }
 
-/* Explicit styling for the group links inside the popup */
-
-.btn-popup-wrapper .tiles-popup a,
+/* Explicit styling for individual group tiles */
 .btn-popup-wrapper .tiles-popup .tile {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90px;
-    height: 45px;
-    background: #1e293b;
-    color: #ffffff !important; /* Forces white text color */
-    text-decoration: none !important; /* Removes default underline */
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: background 0.2s ease, transform 0.2s ease;
+    width: 120px;
+    height: 52px;
+    
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    text-decoration: none !important;
+    
+    transition: all 0.25s ease;
 }
 
-.btn-popup-wrapper .tiles-popup a:hover,
+/* Typography styles */
+.btn-popup-wrapper .tiles-popup .tile .group-code {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+.btn-popup-wrapper .tiles-popup .tile .group-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-top: 1px;
+}
+
+/* Hover behavior on each group tile */
 .btn-popup-wrapper .tiles-popup .tile:hover {
-    background: #0284c7;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(4px);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
 }
 
+.btn-popup-wrapper .tiles-popup .tile:hover .group-code,
+.btn-popup-wrapper .tiles-popup .tile:hover .group-label {
+    color: #ffffff !important;
+}
 /**/
 
 /* Navigation Bar */
