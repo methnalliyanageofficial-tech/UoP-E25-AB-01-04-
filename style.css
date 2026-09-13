@@ -18,6 +18,72 @@ body {
     line-height: 5;
 }
 
+/* Container for the hero button and popup */
+.btn-popup-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Base state for the hidden pop-up */
+.btn-popup-wrapper .tiles-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    
+    /* Hide popup by default */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* Layout grid for 4 tiles */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    /* Smooth animation down */
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+/* Hover trigger state */
+.btn-popup-wrapper:hover .tiles-popup {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Explicit styling for the group links inside the popup */
+.btn-popup-wrapper .tiles-popup a,
+.btn-popup-wrapper .tiles-popup .tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 45px;
+    background: #1e293b;
+    color: #ffffff !important; /* Forces white text color */
+    text-decoration: none !important; /* Removes default underline */
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-popup-wrapper .tiles-popup a:hover,
+.btn-popup-wrapper .tiles-popup .tile:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+}
+
+/**/
 
 
 /* Navigation Bar */
@@ -227,89 +293,6 @@ footer {
     color: #64748b;
 
 }
-
-/* Filter Tags Navigation Bar */
-
-
-
-/*.filter-tags {
-
-    display: flex;
-
-    gap: 0.75rem;
-
-    margin-bottom: 2rem;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-.tag {
-
-    background-color: #1e293b;
-
-    color: #94a3b8;
-
-    padding: 0.5rem 1rem;
-
-    border-radius: 20px;
-
-    font-size: 0.9rem;
-
-    font-weight: 500;
-
-    cursor: pointer;
-
-    border: 1px solid #334155;
-
-    transition: all 0.2s ease-in-out;
-
-}
-
-
-
-.tag:hover, .tag.active {
-
-    background-color: #0284c7;
-
-    color: #ffffff;
-
-    border-color: #38bdf8;
-
-}
-
-
-
-/* Category Badge Inside Cards */
-
-/*.category-badge {
-
-    align-self: flex-start;
-
-    background-color: #0f172a;
-
-    color: #38bdf8;
-
-    font-size: 0.75rem;
-
-    font-weight: 600;
-
-    padding: 0.2rem 0.6rem;
-
-    border-radius: 4px;
-
-    margin-bottom: 0.75rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.5px;
-
-}
-
-*/
-
 /* Reset and General Styles */
 
 * {
