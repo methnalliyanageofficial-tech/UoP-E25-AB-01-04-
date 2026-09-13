@@ -15,7 +15,7 @@ body {
                 url('wala.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #f8fafc;
-    line-height: 5;
+    line-height: 1.6;
 }
 
 /* Container for the hero button and popup */
