@@ -259,24 +259,44 @@ body {
 /* Hero Section */
 
 
-
+/* Hero Section - Fixed Alignment */
 .hero {
 
-    height: 70vh;
-
+    min-height: 70vh;
     display: flex;
-
+    flex-direction: column;
     justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 0 1rem;
+    align-items: flex-start; /* Aligns content cleanly to the left edge margin */
+    max-width: 1200px;      /* Standard max-width matching grid-container */
+    margin: 0 auto;
+    padding: 0 2rem;
 
 }
 
+.hero h1 {
 
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+
+}
+
+.hero p {
+
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+
+}
+
+/* Fix popup positioning relative to button */
+.btn-popup-wrapper {
+
+    position: relative;
+    display: inline-block;
+
+}
 
 
 
